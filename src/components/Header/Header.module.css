@@ -1,0 +1,38 @@
+.header {
+  padding: 12px 20px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #108b6e;
+  color: #edfcf6;
+}
+
+.nav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+
+    li {
+      padding: 4px 8px;
+    }
+  }
+}
+
+.navListItem a {
+  text-decoration: none;
+  color: #edfcf6;
+  transition: all ease 0.3s;
+}
+
+.navListItem a:hover {
+  color: #052923;
+  border-bottom: 2px solid #052923;
+}
+
+a.activeNavLink {
+  color: #052923 !important;
+}
