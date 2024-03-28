@@ -169,7 +169,7 @@ const lion = new Animal(
   "190kg",
   "Sub-Saharan Africa and a small population in India",
   "lion.jpeg",
-  true
+  false
 );
 
 const owl = new Animal(

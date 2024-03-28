@@ -26,21 +26,28 @@ const Sidebar = ({
   }, [groupName, clickedAnimal, mainContents]);
 
   const handeClick = (pAnimalId) => {
-    const tergetAnimal = animals.find((an) => an.id === pAnimalId);
-    setClickedAnimal(tergetAnimal);
+    const targetAnimal = animals.find((an) => an.id === pAnimalId);
+    setClickedAnimal(targetAnimal);
 
     if (clickedAnimal) {
       if (clickedAnimal.id !== pAnimalId) {
-        setMainContents(tergetAnimal);
+        setMainContents(targetAnimal);
+        animals.filter((an) => (an.isActive = false));
+        targetAnimal.isActive = true;
       } else {
         if (mainContents === mainMessage) {
-          setMainContents(tergetAnimal);
+          setMainContents(targetAnimal);
+          animals.filter((an) => (an.isActive = false));
+          targetAnimal.isActive = true;
         } else {
           setMainContents(mainMessage);
+          animals.filter((an) => (an.isActive = false));
         }
       }
     } else {
-      setMainContents(tergetAnimal);
+      setMainContents(targetAnimal);
+      animals.filter((an) => (an.isActive = false));
+      targetAnimal.isActive = true;
     }
   };
 
@@ -82,7 +89,7 @@ const Sidebar = ({
                 key={an.id}
                 id={an.id}
                 onClick={() => handeClick(an.id)}
-                className={styles.sidebarItem}
+                className={`${styles.sidebarItem} ${an.isActive}`}
               >
                 {an.name}
               </li>

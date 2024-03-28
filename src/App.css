@@ -33,3 +33,8 @@ body {
 .activeNavLink {
   color: #052923 !important;
 }
+
+li.true {
+  background-color: #d4f7e8;
+  color: #1dac88;
+}
