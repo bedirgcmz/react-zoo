@@ -1,7 +1,14 @@
 .cardContainer {
-  max-width: 800px;
+  max-width: 600px;
   padding: 12px;
-  /* border: 2px solid gray; */
+  margin: 0 auto;
+}
+
+.cardImg {
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
 }
 
 .cardBody {

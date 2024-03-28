@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  position: relative;
 }
 
 .main-container {
