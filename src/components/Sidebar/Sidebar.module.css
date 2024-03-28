@@ -19,3 +19,26 @@
   width: 100%;
   padding: 6px 12px;
 }
+
+.sidebarMenuIcon {
+  width: 35px;
+  display: none;
+  margin-bottom: 10px;
+}
+
+.overSidaber {
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebarMenuIcon {
+    display: inline-block;
+  }
+  .sidebarContainer {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #edfcf6c9;
+  }
+}

@@ -51,10 +51,6 @@
   margin-right: 12px;
 }
 
-.goGroupPage {
-  /* margin-top: -2px; */
-}
-
 .modal {
   display: none;
   position: absolute;
@@ -74,7 +70,7 @@
 }
 
 .modalContent {
-  width: 100%;
+  width: 90%;
   max-width: 600px;
   background-color: #edfcf6;
   border-radius: 12px;
@@ -96,4 +92,14 @@
   display: block;
   margin-top: 8px;
   color: #edfcf6;
+}
+
+@media only screen and (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+  }
+
+  .cardImg img {
+    margin-bottom: 10px;
+  }
 }

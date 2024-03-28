@@ -10,3 +10,9 @@
   align-items: start;
   padding: 16px 5%;
 }
+
+@media only screen and (max-width: 768px) {
+  .groupPageContainer {
+    flex-direction: column;
+  }
+}

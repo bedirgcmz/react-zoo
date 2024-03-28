@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { animals } from "../../assets/data/animals";
 import styles from "./Sidebar.module.css";
+import "./Sidebar.module.css";
+import { getImageURL } from "../../utils/functions";
 
 const Sidebar = ({
   sidebarListData,
@@ -13,6 +15,7 @@ const Sidebar = ({
   const { groupName } = useParams();
   const [title, setTitle] = useState();
   const [clickedAnimal, setClickedAnimal] = useState();
+  const [menuImg, setMenuImg] = useState("menuIcon.png");
 
   useEffect(() => {
     if (groupName) {
@@ -20,7 +23,6 @@ const Sidebar = ({
       setSidebarListData(filteredList);
       setTitle(filteredList);
     }
-    console.log("useeeee");
   }, [groupName, clickedAnimal, mainContents]);
 
   const handeClick = (pAnimalId) => {
@@ -30,16 +32,11 @@ const Sidebar = ({
     if (clickedAnimal) {
       if (clickedAnimal.id !== pAnimalId) {
         setMainContents(tergetAnimal);
-        console.log("degilleer");
       } else {
         if (mainContents === mainMessage) {
           setMainContents(tergetAnimal);
-          console.log("esitler");
-          console.log(mainContents);
         } else {
           setMainContents(mainMessage);
-          console.log(mainContents);
-          console.log("esit degiller");
         }
       }
     } else {
@@ -47,32 +44,52 @@ const Sidebar = ({
     }
   };
 
+  const openCloseSidebar = () => {
+    const sideBar = document.getElementById("side-bar");
+
+    if (sideBar.style.display == "none") {
+      sideBar.style.display = "inline-block";
+      setMenuImg("close.png");
+    } else {
+      sideBar.style.display = "none";
+      setMenuImg("menuIcon.png");
+    }
+  };
+
   return (
-    <div className={styles.sidebarContainer}>
-      <ul className={styles.sidebarList}>
-        <li>
-          <h3>
-            {title
-              ? `${
-                  sidebarListData[0].group.charAt(0).toUpperCase() +
-                  sidebarListData[0].group.slice(1)
-                } Animals`
-              : "All Animals"}
-          </h3>
-        </li>
-        {sidebarListData?.map((an) => {
-          return (
-            <li
-              key={an.id}
-              id={an.id}
-              onClick={() => handeClick(an.id)}
-              className={styles.sidebarItem}
-            >
-              {an.name}
-            </li>
-          );
-        })}
-      </ul>
+    <div className={styles.overSidaber}>
+      <img
+        onClick={() => openCloseSidebar()}
+        className={styles.sidebarMenuIcon}
+        src={getImageURL(menuImg)}
+        alt="menu icon"
+      />
+      <div id="side-bar" className={styles.sidebarContainer}>
+        <ul className={styles.sidebarList}>
+          <li>
+            <h3>
+              {title
+                ? `${
+                    sidebarListData[0].group.charAt(0).toUpperCase() +
+                    sidebarListData[0].group.slice(1)
+                  } Animals`
+                : "All Animals"}
+            </h3>
+          </li>
+          {sidebarListData?.map((an) => {
+            return (
+              <li
+                key={an.id}
+                id={an.id}
+                onClick={() => handeClick(an.id)}
+                className={styles.sidebarItem}
+              >
+                {an.name}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };
