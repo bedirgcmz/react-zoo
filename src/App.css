@@ -29,3 +29,7 @@ body {
 .main-container {
   padding: 30px 5%;
 }
+
+.activeNavLink {
+  color: #052923 !important;
+}
