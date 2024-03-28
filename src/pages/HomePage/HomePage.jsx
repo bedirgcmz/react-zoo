@@ -2,16 +2,19 @@ import React, { useEffect } from "react";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import MainContent from "../../components/MainContent/MainContent";
 import { animals } from "../../assets/data/animals";
+import styles from "./HomePage.module.css";
 
 const HomePage = ({ sidebarListData, setSidebarListData }) => {
-  useEffect(() => {
-    setSidebarListData(animals);
-  }, []);
+  setSidebarListData(animals);
+  useEffect(() => {}, [setSidebarListData]);
   return (
-    <div>
-      <Sidebar sidebarListData={sidebarListData} setSidebarListData={setSidebarListData} />
-      <MainContent />
-    </div>
+    <>
+      <h1 className={styles.homePageTitle}>Weolcome to Our Zoo</h1>
+      <div className={styles.homePageContainer}>
+        <Sidebar sidebarListData={sidebarListData} setSidebarListData={setSidebarListData} />
+        <MainContent />
+      </div>
+    </>
   );
 };
 

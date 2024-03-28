@@ -1,0 +1,12 @@
+.homePageTitle {
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 12px;
+}
+
+.homePageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 24px;
+}

@@ -8,8 +8,7 @@ import GroupPage from "./pages/GroupPage/GroupPage";
 import { animals } from "./assets/data/animals.js";
 
 function App() {
-  const [groupName, setGroupName] = useState();
-  const [sidebarListData, setSidebarListData] = useState({});
+  const [sidebarListData, setSidebarListData] = useState(animals);
 
   return (
     <div className="app">
@@ -32,7 +31,6 @@ function App() {
             }
           />
         </Routes>
-
         <Footer />
       </Router>
     </div>

@@ -50,7 +50,7 @@ const cassowary = new Animal(
   "1.7m",
   "44kg",
   "Queensland",
-  "./img/cassowary.webp",
+  "./img/cassowary.jpeg",
   false
 );
 
@@ -90,7 +90,7 @@ const eagle = new Animal(
   "2.3m",
   "6kg",
   "Found on every continent",
-  "./img/eagle.webp",
+  "./img/eagle.jpeg",
   false
 );
 
@@ -142,7 +142,7 @@ const kangaroo = new Animal(
   "1.8m",
   "70kg",
   "Australia",
-  "./img/kangaroo.webp",
+  "./img/kangaroo.jpeg",
   false
 );
 
@@ -155,7 +155,7 @@ const koala = new Animal(
   "60cm",
   "14kg",
   "Eastern Australia",
-  "./img/koala.webp",
+  "./img/koala.jpeg",
   false
 );
 
@@ -194,7 +194,7 @@ const flamingo = new Animal(
   "Varies",
   "Varies",
   "Africa, Asia, Americas, and Europe",
-  "./img/flamingo.webp",
+  "./img/flamingo.jpeg",
   false
 );
 
@@ -207,7 +207,7 @@ const peregrineFalcon = new Animal(
   "Varies",
   "Varies",
   "Worldwide, except extreme polar regions",
-  "./img/peregrineFalcon.webp",
+  "./img/peregrineFalcon.jpeg",
   false
 );
 
@@ -220,7 +220,7 @@ const gecko = new Animal(
   "Varies",
   "Varies",
   "Tropical and subtropical regions",
-  "./img/gecko.webp",
+  "./img/gecko.jpeg",
   false
 );
 

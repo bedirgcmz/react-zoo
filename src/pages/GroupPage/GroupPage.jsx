@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { animals } from "../../assets/data/animals";
+import MainContent from "../../components/MainContent/MainContent";
 
 const GroupPage = ({ sidebarListData, setSidebarListData }) => {
   const { groupName } = useParams();
@@ -17,6 +18,7 @@ const GroupPage = ({ sidebarListData, setSidebarListData }) => {
   return (
     <div>
       <Sidebar sidebarListData={sidebarListData} setSidebarListData={setSidebarListData} />
+      <MainContent />
     </div>
   );
 };

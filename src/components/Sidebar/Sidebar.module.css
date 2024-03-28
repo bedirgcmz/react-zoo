@@ -1,0 +1,14 @@
+.sidebarContainer {
+}
+
+.sidebarList {
+  list-style-type: none;
+  width: 200px;
+  padding: 12px 0;
+  border-top: 3px solid #108b6e;
+  border-bottom: 3px solid #108b6e;
+}
+.sidebarItem {
+  width: 100%;
+  padding: 6px 12px;
+}
