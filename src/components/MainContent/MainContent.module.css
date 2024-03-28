@@ -1,0 +1,5 @@
+.MainContentContainer {
+  flex: 0 0 calc(100% - 200px);
+  /* background-color: antiquewhite; */
+  padding-left: 24px;
+}

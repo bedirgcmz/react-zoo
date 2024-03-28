@@ -1,0 +1,31 @@
+.cardContainer {
+  max-width: 800px;
+  padding: 12px;
+  /* border: 2px solid gray; */
+  display: flex;
+  align-items: start;
+}
+.cardImg {
+  height: 100%;
+  display: flex;
+  align-self: center;
+  img {
+    width: 180px;
+    border-radius: 8px;
+  }
+}
+
+.cardBody {
+  padding: 0 20px;
+  p {
+    padding: 4px 0;
+  }
+  b {
+    width: 100px;
+    display: inline-block;
+  }
+}
+
+.modal {
+  display: none;
+}

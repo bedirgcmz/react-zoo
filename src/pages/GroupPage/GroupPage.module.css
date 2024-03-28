@@ -1,0 +1,13 @@
+.groupPageTitle {
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 12px;
+}
+
+.groupPageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 24px;
+  padding: 16px 5%;
+}

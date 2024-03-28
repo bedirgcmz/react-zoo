@@ -24,7 +24,7 @@ const echidna = new Animal(
   "76cm",
   "10kg",
   "Throughout Australia",
-  "./img/echidna.jpeg",
+  "echidna.jpeg",
   false
 );
 
@@ -37,7 +37,7 @@ const frillNeckedLizard = new Animal(
   "90cm",
   "1kg",
   "Northern Australia",
-  "./img/frillNeckedLizard.jpeg",
+  "frillNeckedLizard.jpeg",
   false
 );
 
@@ -50,7 +50,7 @@ const cassowary = new Animal(
   "1.7m",
   "44kg",
   "Queensland",
-  "./img/cassowary.jpeg",
+  "cassowary.jpeg",
   false
 );
 
@@ -64,7 +64,7 @@ const dolphin = new Animal(
   "3m",
   "200kg",
   "Oceans worldwide",
-  "./img/dolphin.jpeg",
+  "dolphin.jpeg",
   false
 );
 
@@ -77,7 +77,7 @@ const giraffe = new Animal(
   "5.5m",
   "800kg",
   "Africa, primarily in savannas and open woodlands",
-  "./img/giraffe.jpeg",
+  "giraffe.jpeg",
   false
 );
 
@@ -90,7 +90,7 @@ const eagle = new Animal(
   "2.3m",
   "6kg",
   "Found on every continent",
-  "./img/eagle.jpeg",
+  "eagle.jpeg",
   false
 );
 
@@ -103,7 +103,7 @@ const penguin = new Animal(
   "1m",
   "40kg",
   "Southern Hemisphere, especially Antarctica",
-  "./img/penguin.jpeg",
+  "penguin.jpeg",
   false
 );
 
@@ -116,7 +116,7 @@ const snake = new Animal(
   "Varies",
   "Varies",
   "Found worldwide in various habitats",
-  "./img/snake.jpeg",
+  "snake.jpeg",
   false
 );
 
@@ -129,7 +129,7 @@ const turtle = new Animal(
   "Varies",
   "Varies",
   "Found in oceans, freshwater, and on land worldwide",
-  "./img/turtle.jpeg",
+  "turtle.jpeg",
   false
 );
 
@@ -142,7 +142,7 @@ const kangaroo = new Animal(
   "1.8m",
   "70kg",
   "Australia",
-  "./img/kangaroo.jpeg",
+  "kangaroo.jpeg",
   false
 );
 
@@ -155,7 +155,7 @@ const koala = new Animal(
   "60cm",
   "14kg",
   "Eastern Australia",
-  "./img/koala.jpeg",
+  "koala.jpeg",
   false
 );
 
@@ -168,7 +168,7 @@ const lion = new Animal(
   "2.1m",
   "190kg",
   "Sub-Saharan Africa and a small population in India",
-  "./img/lion.jpeg",
+  "lion.jpeg",
   true
 );
 
@@ -181,7 +181,7 @@ const owl = new Animal(
   "Varies",
   "Varies",
   "Worldwide, except Antarctica",
-  "./img/owl.jpeg",
+  "owl.jpeg",
   false
 );
 
@@ -194,7 +194,7 @@ const flamingo = new Animal(
   "Varies",
   "Varies",
   "Africa, Asia, Americas, and Europe",
-  "./img/flamingo.jpeg",
+  "flamingo.jpeg",
   false
 );
 
@@ -207,7 +207,7 @@ const peregrineFalcon = new Animal(
   "Varies",
   "Varies",
   "Worldwide, except extreme polar regions",
-  "./img/peregrineFalcon.jpeg",
+  "peregrineFalcon.jpeg",
   false
 );
 
@@ -220,7 +220,7 @@ const gecko = new Animal(
   "Varies",
   "Varies",
   "Tropical and subtropical regions",
-  "./img/gecko.jpeg",
+  "gecko.jpeg",
   false
 );
 
@@ -233,7 +233,7 @@ const iguana = new Animal(
   "Varies",
   "Varies",
   "Central and South America, and some islands",
-  "./img/iguana.jpeg",
+  "iguana.jpeg",
   false
 );
 
@@ -246,7 +246,7 @@ const tortoise = new Animal(
   "Varies",
   "Varies",
   "Found worldwide in different habitats",
-  "./img/tortoise.jpeg",
+  "tortoise.jpeg",
   false
 );
 

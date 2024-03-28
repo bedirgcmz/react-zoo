@@ -9,6 +9,9 @@ import { animals } from "./assets/data/animals.js";
 
 function App() {
   const [sidebarListData, setSidebarListData] = useState(animals);
+  const mainMessage =
+    "We are very glad that you visited our zoo. You can use our website for detailed information about animals.";
+  const [mainContents, setMainContents] = useState(mainMessage);
 
   return (
     <div className="app">
@@ -18,7 +21,13 @@ function App() {
           <Route
             path="/"
             element={
-              <HomePage sidebarListData={sidebarListData} setSidebarListData={setSidebarListData} />
+              <HomePage
+                sidebarListData={sidebarListData}
+                setSidebarListData={setSidebarListData}
+                mainContents={mainContents}
+                setMainContents={setMainContents}
+                mainMessage={mainMessage}
+              />
             }
           />
           <Route
@@ -27,6 +36,9 @@ function App() {
               <GroupPage
                 sidebarListData={sidebarListData}
                 setSidebarListData={setSidebarListData}
+                mainContents={mainContents}
+                setMainContents={setMainContents}
+                mainMessage={mainMessage}
               />
             }
           />

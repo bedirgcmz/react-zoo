@@ -4,10 +4,17 @@
 .sidebarList {
   list-style-type: none;
   width: 200px;
-  padding: 12px 0;
-  border-top: 3px solid #108b6e;
-  border-bottom: 3px solid #108b6e;
+  padding-bottom: 12px;
+  border-bottom: 4px solid #108b6e;
 }
+
+.sidebarList li:first-child {
+  background-color: #108b6e;
+  color: #edfcf6;
+  padding: 6px 0;
+  text-align: center;
+}
+
 .sidebarItem {
   width: 100%;
   padding: 6px 12px;

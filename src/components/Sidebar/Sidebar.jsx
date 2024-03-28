@@ -3,9 +3,16 @@ import { useParams } from "react-router-dom";
 import { animals } from "../../assets/data/animals";
 import styles from "./Sidebar.module.css";
 
-const Sidebar = ({ sidebarListData, setSidebarListData }) => {
+const Sidebar = ({
+  sidebarListData,
+  setSidebarListData,
+  mainContents,
+  setMainContents,
+  mainMessage,
+}) => {
   const { groupName } = useParams();
   const [title, setTitle] = useState();
+  const [clickedAnimal, setClickedAnimal] = useState();
 
   useEffect(() => {
     if (groupName) {
@@ -13,9 +20,33 @@ const Sidebar = ({ sidebarListData, setSidebarListData }) => {
       setSidebarListData(filteredList);
       setTitle(filteredList);
     }
-  }, [groupName]);
+    console.log("useeeee");
+  }, [groupName, clickedAnimal, mainContents]);
 
-  console.log(typeof title);
+  const handeClick = (pAnimalId) => {
+    const tergetAnimal = animals.find((an) => an.id === pAnimalId);
+    setClickedAnimal(tergetAnimal);
+
+    if (clickedAnimal) {
+      if (clickedAnimal.id !== pAnimalId) {
+        setMainContents(tergetAnimal);
+        console.log("degilleer");
+      } else {
+        if (mainContents === mainMessage) {
+          setMainContents(tergetAnimal);
+          console.log("esitler");
+          console.log(mainContents);
+        } else {
+          setMainContents(mainMessage);
+          console.log(mainContents);
+          console.log("esit degiller");
+        }
+      }
+    } else {
+      setMainContents(tergetAnimal);
+    }
+  };
+
   return (
     <div className={styles.sidebarContainer}>
       <ul className={styles.sidebarList}>
@@ -30,7 +61,16 @@ const Sidebar = ({ sidebarListData, setSidebarListData }) => {
           </h3>
         </li>
         {sidebarListData?.map((an) => {
-          return <li className={styles.sidebarItem}>{an.name}</li>;
+          return (
+            <li
+              key={an.id}
+              id={an.id}
+              onClick={() => handeClick(an.id)}
+              className={styles.sidebarItem}
+            >
+              {an.name}
+            </li>
+          );
         })}
       </ul>
     </div>
