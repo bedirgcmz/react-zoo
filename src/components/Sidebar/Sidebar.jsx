@@ -22,6 +22,9 @@ const Sidebar = ({
       const filteredList = animals.filter((an) => an.group === groupName);
       setSidebarListData(filteredList);
       setTitle(filteredList);
+    } else {
+      animals.forEach((an) => (an.isActive = false));
+      setSidebarListData(animals);
     }
   }, [groupName, clickedAnimal, mainContents]);
 

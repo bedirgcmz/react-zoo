@@ -6,7 +6,6 @@ const MainContent = ({ mainContents, groupName, mainMessage }) => {
   const groupMessage = `Welcome to the ${
     groupName?.charAt(0).toUpperCase() + groupName?.slice(1)
   } page. You can click on the animal you want to examine from the menu on the side.`;
-  console.log(groupName);
 
   return (
     <div className={styles.MainContentContainer}>

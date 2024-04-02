@@ -2,6 +2,13 @@
   width: calc(100% - 200px);
   margin-left: 24px;
   border-top: 5px solid #108b6e;
+
+  h4 {
+    max-width: 350px;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
