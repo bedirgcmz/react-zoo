@@ -23,7 +23,7 @@ const GroupPage = ({
   }, [groupName, animals]);
 
   return (
-    <>
+    <div className="bg-animals">
       <h1 className={styles.groupPageTitle}>
         Weolcome to {groupName.charAt(0).toUpperCase() + groupName.slice(1)} Page
       </h1>
@@ -42,7 +42,7 @@ const GroupPage = ({
           groupName={groupName}
         />
       </div>
-    </>
+    </div>
   );
 };
 

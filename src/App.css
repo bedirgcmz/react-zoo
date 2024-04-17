@@ -38,3 +38,12 @@ li.true {
   background-color: #d4f7e8;
   color: #1dac88;
 }
+
+.bg-animals {
+  background: url(./assets/images/bg-animals.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: calc(100vh - 128px);
+}

@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import GroupPage from "./pages/GroupPage/GroupPage";
 import { animals } from "./assets/data/animals.js";
+import Layout from "./layout/Layout.jsx";
 
 function App() {
   const [sidebarListData, setSidebarListData] = useState(animals);
@@ -16,34 +17,34 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Header />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <HomePage
-                sidebarListData={sidebarListData}
-                setSidebarListData={setSidebarListData}
-                mainContents={mainContents}
-                setMainContents={setMainContents}
-                mainMessage={mainMessage}
-              />
-            }
-          />
-          <Route
-            path="/group/:groupName"
-            element={
-              <GroupPage
-                sidebarListData={sidebarListData}
-                setSidebarListData={setSidebarListData}
-                mainContents={mainContents}
-                setMainContents={setMainContents}
-                mainMessage={mainMessage}
-              />
-            }
-          />
+          <Route element={<Layout />}>
+            <Route
+              path="/"
+              element={
+                <HomePage
+                  sidebarListData={sidebarListData}
+                  setSidebarListData={setSidebarListData}
+                  mainContents={mainContents}
+                  setMainContents={setMainContents}
+                  mainMessage={mainMessage}
+                />
+              }
+            />
+            <Route
+              path="/group/:groupName"
+              element={
+                <GroupPage
+                  sidebarListData={sidebarListData}
+                  setSidebarListData={setSidebarListData}
+                  mainContents={mainContents}
+                  setMainContents={setMainContents}
+                  mainMessage={mainMessage}
+                />
+              }
+            />
+          </Route>
         </Routes>
-        <Footer />
       </Router>
     </div>
   );

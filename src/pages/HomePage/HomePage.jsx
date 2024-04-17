@@ -14,9 +14,9 @@ const HomePage = ({
   setSidebarListData(animals);
   useEffect(() => {
     setMainContents(mainMessage);
-  }, [setSidebarListData]);
+  }, [setSidebarListData, mainMessage, setMainContents]);
   return (
-    <>
+    <div className="bg-animals">
       <h1 className={styles.homePageTitle}>Weolcome to Our Zoo</h1>
       <div className={styles.homePageContainer}>
         <Sidebar
@@ -32,7 +32,7 @@ const HomePage = ({
           mainMessage={mainMessage}
         />
       </div>
-    </>
+    </div>
   );
 };
 
