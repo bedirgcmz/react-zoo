@@ -17,7 +17,7 @@ const HomePage = ({
   }, [setSidebarListData, mainMessage, setMainContents]);
   return (
     <div className="bg-animals">
-      <h1 className={styles.homePageTitle}>Weolcome to Our Zoo</h1>
+      <h1 className={styles.homePageTitle}>Welcome to Our Zoo</h1>
       <div className={styles.homePageContainer}>
         <Sidebar
           sidebarListData={sidebarListData}

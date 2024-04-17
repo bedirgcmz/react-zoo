@@ -25,7 +25,7 @@ const GroupPage = ({
   return (
     <div className="bg-animals">
       <h1 className={styles.groupPageTitle}>
-        Weolcome to {groupName.charAt(0).toUpperCase() + groupName.slice(1)} Page
+        Welcome to {groupName.charAt(0).toUpperCase() + groupName.slice(1)} Page
       </h1>
       <div className={styles.groupPageContainer}>
         <Sidebar
